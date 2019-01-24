@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MBL404_Week5_Team_B</string>
+    <string-array name="search_loc_status">
+        <item>Select</item>
+        <item>Open</item>
+        <item>Closed</item>
+        <item>Coming soon</item>
+    </string-array>
+</resources>

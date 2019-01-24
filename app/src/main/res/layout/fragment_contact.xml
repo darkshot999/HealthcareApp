@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_map"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/textbox_border">
+
+    <TextView
+        android:id="@+id/lblClinicName"
+        android:text="Clinic Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        style="@style/Base.TextAppearance.AppCompat.Display1"
+        android:textAlignment="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@drawable/border">
+
+        <ImageView
+            android:id="@+id/imgPhone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/phone"
+            android:layout_marginStart="21dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/lnkPhone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginStart="17dp"
+            android:layout_alignBaseline="@+id/lblPhone"
+            android:layout_alignBottom="@+id/lblPhone"
+            android:layout_toEndOf="@+id/lblPhone"
+            android:autoLink="all"
+            android:clickable="true"
+            android:linksClickable="true"/>
+        <ImageView
+            android:id="@+id/imgFax"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/fax"
+            android:layout_below="@+id/imgPhone"
+            android:layout_alignRight="@+id/imgPhone"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+        <TextView
+            android:id="@+id/lblFax"
+            android:text="Fax:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_alignBottom="@+id/imgFax"
+            android:layout_alignEnd="@+id/lblPhone"
+            android:textAlignment="textEnd"
+            android:layout_marginBottom="12dp" />
+
+        <ImageView
+            android:id="@+id/imgWebsite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/web"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/imgFax"
+            android:layout_alignStart="@+id/imgFax" />
+        <TextView
+            android:id="@+id/lblWebsite"
+            android:text="Website:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="14dp"
+            android:layout_alignBottom="@+id/imgWebsite"
+            android:layout_alignEnd="@+id/lblFax" />
+
+        <TextView
+            android:id="@+id/lblAddress"
+            android:text="Address:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="13dp"
+            android:layout_alignBottom="@+id/imgAddress"
+            android:layout_alignEnd="@+id/lblWebsite" />
+        <TextView
+            android:id="@+id/lnkAddress"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_alignBaseline="@+id/lblAddress"
+            android:layout_alignBottom="@+id/lblAddress"
+            android:layout_alignStart="@+id/lnkWebsite"
+            android:autoLink="all"
+            android:clickable="true"
+            android:linksClickable="true"/>
+        <ImageView
+            android:id="@+id/imgHours"
+            app:srcCompat="@drawable/business_hours"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="false"
+            android:layout_marginTop="15dp"
+            android:layout_height="150dp"
+            android:layout_width="225dp"
+            android:layout_below="@+id/lnkAddress"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/btnAddContact"
+            android:text="Add Contact"
+            android:layout_height="wrap_content"
+            android:layout_width="130dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/imgHours"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/imgAddress"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/map"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_below="@+id/imgWebsite"
+            android:layout_alignStart="@+id/imgWebsite" />
+
+        <TextView
+            android:id="@+id/lnkFax"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_alignBaseline="@+id/lblFax"
+            android:layout_alignBottom="@+id/lblFax"
+            android:layout_alignStart="@+id/lnkPhone" />
+
+        <TextView
+            android:id="@+id/lnkWebsite"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_alignBaseline="@+id/lblWebsite"
+            android:layout_alignBottom="@+id/lblWebsite"
+            android:layout_alignStart="@+id/lnkFax"
+            android:autoLink="all"
+            android:clickable="true"
+            android:linksClickable="true"/>
+
+        <TextView
+            android:id="@+id/lblPhone"
+            android:text="Phone:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:textSize="16sp"
+            android:layout_above="@+id/imgFax"
+            android:layout_alignStart="@+id/btnAddContact" />
+    </RelativeLayout>
+
+</LinearLayout>
+

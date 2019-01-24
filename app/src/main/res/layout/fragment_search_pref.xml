@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true">
+<LinearLayout
+    android:id="@+id/fragment_search_pref"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/textbox_border">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            tools:context=".fragments.SortBy"
+            android:background="@drawable/border">
+
+            <TextView
+                android:text="Sort by"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/textSortBy"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+
+            <Button
+                android:text="Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/btnName"
+                android:minHeight="50dp"
+                android:minWidth="110dp"
+                android:layout_below="@+id/textSortBy"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:text="Distance (miles)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnName"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:id="@+id/textDistance"
+                android:paddingLeft="10dp" />
+
+            <Button
+                android:text="2"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/btn2miles"
+                android:minHeight="48dp"
+                android:layout_width="60dp"
+                android:layout_below="@+id/textDistance"
+                android:layout_alignLeft="@+id/textDistance"
+                android:layout_alignStart="@+id/textDistance"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp" />
+
+            <Button
+                android:text="5"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn5miles"
+                android:layout_width="60dp"
+                android:layout_alignBaseline="@+id/btn2miles"
+                android:layout_alignBottom="@+id/btn2miles"
+                android:layout_toRightOf="@+id/btn2miles"
+                android:layout_toEndOf="@+id/btn2miles" />
+
+            <Button
+                android:text="10"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn10miles"
+                android:layout_width="60dp"
+                android:layout_alignBaseline="@+id/btn5miles"
+                android:layout_alignBottom="@+id/btn5miles"
+                android:layout_toRightOf="@+id/btn5miles"
+                android:layout_toEndOf="@+id/btn5miles" />
+
+            <Button
+                android:text="25"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/btn10miles"
+                android:layout_toRightOf="@+id/btn10miles"
+                android:layout_toEndOf="@+id/btn10miles"
+                android:id="@+id/btn25miles" />
+
+            <Button
+                android:text="50"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btn25miles"
+                android:layout_toRightOf="@+id/btn25miles"
+                android:layout_toEndOf="@+id/btn25miles"
+                android:id="@+id/btn50miles" />
+
+            <Button
+                android:text="Distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDistance"
+                android:minHeight="50dp"
+                android:minWidth="110dp"
+                android:layout_above="@+id/textDistance"
+                android:layout_toRightOf="@+id/btnName"
+                android:layout_toEndOf="@+id/btnName" />
+
+            <Button
+                android:text="Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRating"
+                android:minHeight="50dp"
+                android:minWidth="110dp"
+                android:layout_alignBaseline="@+id/btnDistance"
+                android:layout_alignBottom="@+id/btnDistance"
+                android:layout_toRightOf="@+id/btnDistance"
+                android:layout_toEndOf="@+id/btnDistance" />
+
+            <CheckBox
+                android:text="Set Default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnRating"
+                android:layout_alignParentEnd="true"
+                android:checked="true"
+                android:id="@+id/chkBoxDefault" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+            <TextView
+                android:id="@+id/lblFilters"
+                android:text="Filters"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingLeft="10dp"
+                android:textSize="16sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:id="@+id/lnkClearAll"
+                android:text="Clear All"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblFilters"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textStyle="normal|bold" />
+            <TextView
+                android:id="@+id/lblAddress"
+                android:text="Address:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnkClearAll"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="26dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="11dp" />
+            <TextView
+                android:id="@+id/lblCity"
+                android:text="City:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/lblAddress"
+                android:layout_alignLeft="@+id/lblAddress"
+                android:layout_alignEnd="@+id/lblAddress"/>
+            <TextView
+                android:id="@+id/lblState"
+                android:text="State:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/lblCity"
+                android:layout_alignLeft="@+id/lblCity"
+                android:layout_alignEnd="@+id/lblCity"/>
+            <TextView
+                android:id="@+id/lblZipcode"
+                android:text="Zipcode:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/lblState"
+                android:layout_alignLeft="@+id/lblState"
+                android:layout_alignEnd="@+id/lblState"/>
+            <TextView
+                android:id="@+id/lblStatus"
+                android:text="Status:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/lblZipcode"
+                android:layout_alignLeft="@+id/lblZipcode"
+                android:layout_alignEnd="@+id/lblZipcode"/>
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_below="@+id/lnkClearAll"
+                android:layout_toEndOf="@+id/lblAddress"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:textSize="14sp"
+                android:background="@drawable/textbox_border"/>
+
+            <EditText
+                android:id="@+id/editTextCity"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_below="@+id/editTextAddress"
+                android:layout_alignStart="@+id/editTextAddress"
+                android:textSize="14sp"
+                android:background="@drawable/textbox_border"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/editTextState"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_below="@+id/editTextCity"
+                android:layout_alignStart="@+id/editTextCity"
+                android:textSize="14sp"
+                android:background="@drawable/textbox_border"
+                android:layout_marginTop="5dp"/>
+            <EditText
+                android:id="@+id/editTextZipcode"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:layout_below="@+id/editTextState"
+                android:layout_alignStart="@+id/editTextState"
+                android:textSize="14sp"
+                android:background="@drawable/textbox_border"
+                android:layout_marginTop="5dp"/>
+            <Spinner
+                android:id="@+id/ddlStatus"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:inputType="textPersonName"
+                android:text="Status"
+                android:layout_below="@+id/editTextZipcode"
+                android:layout_alignStart="@+id/editTextZipcode"
+                android:textSize="10sp"
+                android:background="@drawable/textbox_border"
+                android:layout_marginTop="5dp"
+                android:spinnerMode="dialog"/>
+            <Button
+                android:text="Search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ddlStatus"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/btnSearch" />
+        </RelativeLayout>
+
+</LinearLayout>
+</ScrollView>

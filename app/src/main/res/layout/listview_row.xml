@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtViewName"
+        android:layout_weight="0.11"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"/>
+
+    <RatingBar
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:rating="2"
+        android:numStars="5"
+        android:stepSize="0.1"
+        android:max="5"
+        android:isIndicator="true"
+        android:layout_marginTop="13dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="13dp"
+        android:layout_weight="0.01" />
+
+    <Button
+        android:text="Details"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:id="@+id/btnDetails"
+        android:layout_weight="0.05"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:focusable="false"/>
+
+</LinearLayout>
